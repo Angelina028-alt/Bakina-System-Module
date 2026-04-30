@@ -1,0 +1,33 @@
+# Версия OpenAPI
+openapi: 3.0.0
+
+info:
+  title: API фронтенда
+  version: 1.0.0
+
+paths:
+  # Эндпоинт для отправки сообщений в чат
+  /chat/send:
+    post:
+      summary: Отправить сообщение
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:     # Текст запроса пользователя
+                  type: string
+                model:     # Выбранная модель нейросети
+                  type: string
+      responses:
+        '200':
+          description: Успешный ответ
+
+  # Эндпоинт для получения списка доступных моделей
+  /models:
+    get:
+      summary: Список моделей
+      responses:
+        '200':
+          description: Список доступных нейросетей
