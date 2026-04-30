@@ -1,0 +1,14 @@
+# Операционные системы
+.DS_Store
+Thumbs.db
+
+# Редакторы кода
+.vscode/
+.idea/
+
+# Логи и временные файлы
+*.log
+*.tmp
+
+# Зависимости проекта (node_modules не храним в Git)
+node_modules/
